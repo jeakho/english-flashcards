@@ -1,0 +1,19 @@
+<h1 mat-dialog-title [style.text-align]="'center'">
+  New list
+</h1>
+<div mat-dialog-content>
+  <mat-form-field class="new-list-title-field">
+    <mat-label>Title</mat-label>
+    <input matInput [formControl]="listTitleControl" [errorStateMatcher]="instantlyAppearedErrorStateMatcher">
+    <mat-error *ngIf="listTitleControl.invalid && (listTitleControl.dirty || listTitleControl.touched)">
+      <span *ngIf="listTitleControl.errors?.['required']">List title is required</span>
+      <span *ngIf="listTitleControl.errors?.['pattern']">
+        List name must contain only letters, numbers, and spaces
+      </span>
+    </mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions [style]="{ display: 'flex', justifyContent: 'space-between' }">
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSubmitClick()" cdkFocusInitial [disabled]="listTitleControl.invalid">Save</button>
+</div>

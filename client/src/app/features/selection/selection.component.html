@@ -1,0 +1,15 @@
+<div class="wrapper component__wrapper">
+  <app-component-header
+    [title]="activeComponentTitle$ | async"
+  ></app-component-header>
+
+  <app-sidenav
+    [menuList]="(listTitles$ | async) || []"
+  >
+    <div class="fill-height content__wrapper">
+      <button mat-fab *ngIf="(activeComponentTitle$ | async) === 'Learn'" color="primary" class="add-list-button"> +
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </app-sidenav>
+</div>

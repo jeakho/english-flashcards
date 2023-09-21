@@ -1,0 +1,30 @@
+<div class="wrapper component__wrapper">
+  <header class="fill-width">
+    <form [formGroup]="form" class="header__container">
+      <mat-form-field appearance="fill">
+        <mat-label>Search...</mat-label>
+        <input matInput type="text" formControlName="cardsFilter" [errorStateMatcher]="instantErrorsStateMatcher">
+        <button mat-button *ngIf="filterRule$ | async" matSuffix mat-icon-button aria-label="Clear"
+                (click)="clearFilter()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-error>No items found...</mat-error>
+      </mat-form-field>
+
+      <div class="spacer"></div>
+
+      <mat-slide-toggle formControlName="isTimerActive">
+        Timer: {{ (isTimerActive$ | async) ? 'on' : 'off' }}</mat-slide-toggle>
+    </form>
+  </header>
+  <main>
+    <div class="main__container">
+      <mat-chip-listbox>
+        <mat-chip 
+          *ngFor="let card of filteredCards$ | async"
+          (click)="selectCard(card)"
+        >{{ card.value }}</mat-chip>
+      </mat-chip-listbox>
+    </div>
+  </main>
+</div>

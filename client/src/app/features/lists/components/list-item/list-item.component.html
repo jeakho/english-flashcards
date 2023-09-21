@@ -1,0 +1,19 @@
+<div class="wrapper component__wrapper">
+  <mat-card class="list-item-card">
+    <mat-card-header [style.justify-content]="'flex-end'">
+      <mat-icon style="float: right">mode_edit</mat-icon>
+      <mat-icon style="float: right" (click)="onDeleteClick($event)">delete</mat-icon>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="wrapper list-item-card-content">
+        <mat-card-title class="list-item-card-text list-item-card-title">
+          {{ listItem.title }}
+        </mat-card-title>
+        <mat-card-subtitle class="list-item-card-text">
+          {{ listItem.cardsQuantity }} cards
+        </mat-card-subtitle>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

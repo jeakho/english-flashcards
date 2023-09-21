@@ -1,0 +1,16 @@
+.component__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__wrapper {
+  position: relative;
+}
+
+app-component-header {
+  color: #fff;
+}
+
+app-sidenav {
+  flex-grow: 1;
+}

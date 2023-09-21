@@ -1,0 +1,20 @@
+.component__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.main__container {
+  padding: 20px 20px;
+
+}

@@ -1,0 +1,20 @@
+<div class="wrapper component__wrapper">
+  <section class="word-card__wrapper">
+    <div class="word-card__container">
+      <ng-container *ngIf="(activeCard$ | async) as activeCard">
+        <app-word-card
+          class="word-card"
+          [wordCard]="activeCard"
+        ></app-word-card>
+      </ng-container>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section class="cards-selection__container">
+    <app-cards-control
+      class="wrapper cards-control"
+      (cardSelected)="selectCard($event)"
+      [cards]="(cards$ | async) || []"
+    ></app-cards-control>
+  </section>
+</div>

@@ -1,0 +1,16 @@
+<div class="wrapper component__wrapper">
+  <mat-card *ngIf="wordCard" class="wrapper word-card" (click)="rotateCard($event)">
+    <div class="card-front">
+      <div class="card-image__container">
+        <img class="card-image" [src]="wordCard.image?.link || defaultImageUlr" [default]="defaultImageUlr">
+      </div>
+      <div class="card-front-text"> {{ wordCard.value }} </div>
+    </div>
+
+    <div class="card-back">
+      <ol>
+        <li *ngFor="let translation of wordCard.translations">{{ translation }}</li>
+      </ol>
+    </div>
+  </mat-card>
+</div>

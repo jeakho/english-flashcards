@@ -1,0 +1,10 @@
+<div class="wrapper component__wrapper">
+  <app-sidenav
+    [menuList]="(listTitles$ | async) || []"
+    (listItemSelected)="setActiveComponentTitle($event)"
+  >
+    <div class="fill-height content__wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </app-sidenav>
+</div>

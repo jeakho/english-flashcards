@@ -1,0 +1,44 @@
+.component__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.word-card__wrapper {
+  width: 100%;
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-card__container {
+  width: 35%;
+  height: 50%;
+  position: relative;
+}
+
+.word-card {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.cards-selection__container {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.cards-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+section {
+  position: relative;
+}

@@ -1,0 +1,9 @@
+<app-navbar class="mat-elevation-z6"></app-navbar>
+<div class="wrapper flex direction-column">
+  <app-component-header
+    [title]="activeComponentTitle$ | async"
+  ></app-component-header>
+  <div style="flex-grow: 1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

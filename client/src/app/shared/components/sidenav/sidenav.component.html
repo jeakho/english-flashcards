@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <mat-drawer-container class="wrapper" autosize>
+    <mat-drawer mode="side" opened>
+      <mat-nav-list>
+        <a [routerLink]="[menuItem]" class="list-item" *ngFor="let menuItem of menuList">
+          <mat-list-item (click)="listItemSelected.emit(menuItem)">{{ menuItem }}</mat-list-item>
+        </a>
+      </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <ng-content></ng-content>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

@@ -1,0 +1,13 @@
+.primary-header {
+  background: #7b1fa2;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 28px 8px;
+  font-size: 20px;
+}
