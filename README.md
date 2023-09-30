@@ -34,7 +34,7 @@ Before you begin, ensure you have the following prerequisites installed:
 
 ### Server side
 1. Clone this repository to your local machine: `git clone https://github.com/yourusername/flashcards-app.git`.
-2. Navigate to the server directory: `cd serve`.
+2. Navigate to the server directory: `cd server`.
 3. Install the required dependencies using npm or yarn: `npm install` **or** `yarn install`.
 4. Start the server: `npm start`.
 5. The server should now be running and accessible at the specified API endpoint (e.g., `http://localhost:3000`).
